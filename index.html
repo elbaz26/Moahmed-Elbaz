@@ -257,8 +257,8 @@
             <div class="skill-tags-container">
               <span class="skill-pill"><i class="fa-brands fa-python"></i> Python</span>
               <span class="skill-pill"><i class="fa-solid fa-database"></i> SQL</span>
-              <span class="skill-pill"><i class="fa-solid fa-laptop-code"></i> C++ <span class="skill-badge-extra">Basics</span></span>
-              <span class="skill-pill"><i class="fa-brands fa-php"></i> PHP <span class="skill-badge-extra">Basics</span></span>
+              <span class="skill-pill"><i class="fa-solid fa-laptop-code"></i> C++</span>
+              <span class="skill-pill"><i class="fa-brands fa-php"></i> PHP</span>
             </div>
           </div>
 
@@ -276,7 +276,7 @@
               <span class="skill-pill"><i class="fa-solid fa-table-cells"></i> NumPy</span>
               <span class="skill-pill"><i class="fa-solid fa-table"></i> Pandas</span>
               <span class="skill-pill"><i class="fa-solid fa-chart-line"></i> Matplotlib</span>
-              <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> Flask <span class="skill-badge-extra">Basic</span></span>
+              <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> Flask</span>
             </div>
           </div>
 
@@ -294,7 +294,7 @@
               <span class="skill-pill"><i class="fa-solid fa-table-cells"></i> NumPy</span>
               <span class="skill-pill"><i class="fa-solid fa-table"></i> Pandas</span>
               <span class="skill-pill"><i class="fa-solid fa-chart-area"></i> Matplotlib</span>
-              <span class="skill-pill"><i class="fa-solid fa-arrows-split-up-and-left"></i> ETL Concepts <span class="skill-badge-extra skill-badge-learning">Developing</span></span>
+              <span class="skill-pill"><i class="fa-solid fa-arrows-split-up-and-left"></i> ETL Concepts</span>
             </div>
           </div>
 
@@ -307,8 +307,8 @@
               <h3 class="category-title">Databases</h3>
             </div>
             <div class="skill-tags-container">
-              <span class="skill-pill"><i class="fa-solid fa-server"></i> SQL Server <span class="skill-badge-extra">Good</span></span>
-              <span class="skill-pill"><i class="fa-solid fa-database"></i> MySQL <span class="skill-badge-extra">Good</span></span>
+              <span class="skill-pill"><i class="fa-solid fa-server"></i> SQL Server</span>
+              <span class="skill-pill"><i class="fa-solid fa-database"></i> MySQL</span>
               <span class="skill-pill"><i class="fa-solid fa-sitemap"></i> Database Design</span>
               <span class="skill-pill"><i class="fa-solid fa-diagram-project"></i> ERD Modeling</span>
               <span class="skill-pill"><i class="fa-solid fa-link"></i> Database Relationships</span>
@@ -328,11 +328,11 @@
             </div>
             <div class="skill-tags-container">
               <span class="skill-pill"><i class="fa-brands fa-python"></i> Python Backend Logic</span>
-              <span class="skill-pill"><i class="fa-solid fa-flask"></i> Flask <span class="skill-badge-extra">Basic</span></span>
-              <span class="skill-pill"><i class="fa-brands fa-php"></i> PHP <span class="skill-badge-extra">Basics</span></span>
-              <span class="skill-pill"><i class="fa-brands fa-laravel"></i> Laravel <span class="skill-badge-extra">Basics</span></span>
-              <span class="skill-pill"><i class="fa-solid fa-gears"></i> Django <span class="skill-badge-extra skill-badge-learning">Learning</span></span>
-              <span class="skill-pill"><i class="fa-solid fa-cloud-arrow-down"></i> Django REST Framework <span class="skill-badge-extra skill-badge-learning">Planned</span></span>
+              <span class="skill-pill"><i class="fa-solid fa-flask"></i> Flask</span>
+              <span class="skill-pill"><i class="fa-brands fa-php"></i> PHP</span>
+              <span class="skill-pill"><i class="fa-brands fa-laravel"></i> Laravel</span>
+              <span class="skill-pill"><i class="fa-solid fa-gears"></i> Django</span>
+              <span class="skill-pill"><i class="fa-solid fa-cloud-arrow-down"></i> Django REST Framework</span>
             </div>
           </div>
 
@@ -372,7 +372,15 @@
 
         <div class="projects-grid">
           <!-- PROJECT 1: P2P Specialized Tool Library -->
-          <article class="project-card reveal-on-scroll">
+          <article class="project-card project-card-featured reveal-on-scroll">
+            <!-- Project Cover Image -->
+            <div class="project-cover">
+              <img src="assets/images/p2p/cover_browse_tools.png" alt="P2P Tool Library - Browse Tools Page" class="project-cover-img" loading="lazy">
+              <div class="project-cover-overlay">
+                <span class="project-cover-label"><i class="fa-solid fa-images"></i> Project Preview</span>
+              </div>
+            </div>
+
             <div class="project-body">
               <div class="project-top">
                 <span class="project-badge"><i class="fa-solid fa-users"></i> NTI Graduation Project</span>
@@ -404,6 +412,66 @@
                   <li><i class="fa-solid fa-check"></i> Resolved database-related issues</li>
                   <li><i class="fa-solid fa-check"></i> Collaborated with the team on database/backend integration</li>
                 </ul>
+              </div>
+
+              <!-- Project Screenshots Gallery -->
+              <div class="project-gallery-section">
+                <button type="button" class="gallery-toggle" id="p2p-gallery-toggle" aria-expanded="false" aria-controls="p2p-gallery">
+                  <span class="gallery-toggle-text"><i class="fa-solid fa-images"></i> Project Screenshots <span class="gallery-count">8</span></span>
+                  <i class="fa-solid fa-chevron-down gallery-toggle-icon"></i>
+                </button>
+                <div class="project-gallery" id="p2p-gallery" hidden>
+                  <div class="gallery-grid">
+                    <div class="gallery-item" data-caption="Login Page">
+                      <img src="assets/images/p2p/login.png" alt="P2P Tool Library - Login Page" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Login Page (Validation)">
+                      <img src="assets/images/p2p/login_validation.png" alt="P2P Tool Library - Login Validation" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Tool Details Page">
+                      <img src="assets/images/p2p/tool_details.png" alt="P2P Tool Library - Tool Details" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Nearby Tools (Geospatial Discovery)">
+                      <img src="assets/images/p2p/nearby_tools.png" alt="P2P Tool Library - Nearby Tools" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Reservation & Booking">
+                      <img src="assets/images/p2p/reserve_booking.png" alt="P2P Tool Library - Reserve Booking" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Category Model (PHP Code)">
+                      <img src="assets/images/p2p/code_model.png" alt="P2P Tool Library - Category Model Code" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Database Schema (SQL)">
+                      <img src="assets/images/p2p/code_schema.png" alt="P2P Tool Library - Database Schema" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Booking Controller (PHP Code)">
+                      <img src="assets/images/p2p/code_controller.png" alt="P2P Tool Library - Booking Controller Code" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div class="project-tech-tags">
@@ -520,7 +588,15 @@
           </article>
 
           <!-- PROJECT 4: Clinic Management System -->
-          <article class="project-card reveal-on-scroll delay-1">
+          <article class="project-card project-card-featured reveal-on-scroll delay-1">
+            <!-- Project Cover Image -->
+            <div class="project-cover">
+              <img src="assets/images/Clinic/cover_dashboard.png" alt="Clinic Management System - Dashboard & Analytics" class="project-cover-img" loading="lazy">
+              <div class="project-cover-overlay">
+                <span class="project-cover-label"><i class="fa-solid fa-images"></i> Project Preview</span>
+              </div>
+            </div>
+
             <div class="project-body">
               <div class="project-top">
                 <span class="project-badge"><i class="fa-solid fa-laptop-code"></i> Individual Project</span>
@@ -545,6 +621,66 @@
                   <li><i class="fa-solid fa-check"></i> Database Relationships</li>
                   <li><i class="fa-solid fa-check"></i> Backend Development</li>
                 </ul>
+              </div>
+
+              <!-- Project Screenshots Gallery -->
+              <div class="project-gallery-section">
+                <button type="button" class="gallery-toggle" id="clinic-gallery-toggle" aria-expanded="false" aria-controls="clinic-gallery">
+                  <span class="gallery-toggle-text"><i class="fa-solid fa-images"></i> Project Screenshots <span class="gallery-count">8</span></span>
+                  <i class="fa-solid fa-chevron-down gallery-toggle-icon"></i>
+                </button>
+                <div class="project-gallery" id="clinic-gallery" hidden>
+                  <div class="gallery-grid">
+                    <div class="gallery-item" data-caption="Patients Management">
+                      <img src="assets/images/Clinic/patients_management.png" alt="Clinic Management - Patients Management" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Doctors Management">
+                      <img src="assets/images/Clinic/doctors_management.png" alt="Clinic Management - Doctors Management" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Dashboard & Stats Overview">
+                      <img src="assets/images/Clinic/dashboard_overview.png" alt="Clinic Management - Dashboard & Stats Overview" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="User Model (Laravel Eloquent)">
+                      <img src="assets/images/Clinic/code_user_model.png" alt="Clinic Management - User Model" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Role Middleware Registration">
+                      <img src="assets/images/Clinic/code_middleware.png" alt="Clinic Management - Role Middleware" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Web Routes & Role-Based Access">
+                      <img src="assets/images/Clinic/code_routes.png" alt="Clinic Management - Web Routes" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="MySQL Database Configuration">
+                      <img src="assets/images/Clinic/code_database.png" alt="Clinic Management - MySQL Database Config" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Laravel Project Directory Architecture">
+                      <img src="assets/images/Clinic/project_structure.png" alt="Clinic Management - Project Architecture" loading="lazy">
+                      <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div class="project-tech-tags">
@@ -948,83 +1084,53 @@
         </div>
 
         <div class="contact-grid">
-          <!-- Contact Methods Column -->
-          <div class="contact-info-col reveal-on-scroll">
-            <!-- Email -->
-            <a href="mailto:elbaz7447@gmail.com" class="contact-method-card" aria-label="Send email to elbaz7447@gmail.com">
-              <div class="contact-icon-box">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div>
-                <div class="contact-method-label">Email Address</div>
-                <div class="contact-method-value">elbaz7447@gmail.com</div>
-              </div>
-            </a>
+          <!-- Email -->
+          <a href="mailto:elbaz7447@gmail.com" class="contact-method-card reveal-on-scroll" aria-label="Send email to elbaz7447@gmail.com">
+            <div class="contact-icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-method-content">
+              <div class="contact-method-label">Email Address</div>
+              <div class="contact-method-value">elbaz7447@gmail.com</div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+          </a>
 
-            <!-- WhatsApp -->
-            <a href="https://wa.me/201102389095" target="_blank" rel="noopener noreferrer" class="contact-method-card" aria-label="Chat on WhatsApp with Mohamed">
-              <div class="contact-icon-box" style="color: #25d366; background: rgba(37, 211, 102, 0.1);">
-                <i class="fa-brands fa-whatsapp"></i>
-              </div>
-              <div>
-                <div class="contact-method-label">WhatsApp</div>
-                <div class="contact-method-value">+20 110 238 9095</div>
-              </div>
-            </a>
+          <!-- WhatsApp -->
+          <a href="https://wa.me/201102389095" target="_blank" rel="noopener noreferrer" class="contact-method-card reveal-on-scroll delay-1" aria-label="Chat on WhatsApp with Mohamed">
+            <div class="contact-icon-box" style="color: #25d366; background: rgba(37, 211, 102, 0.1);">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="contact-method-content">
+              <div class="contact-method-label">WhatsApp</div>
+              <div class="contact-method-value">+20 110 238 9095</div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+          </a>
 
-            <!-- GitHub -->
-            <a href="https://github.com/elbaz26" target="_blank" rel="noopener noreferrer" class="contact-method-card" aria-label="Open GitHub profile">
-              <div class="contact-icon-box">
-                <i class="fa-brands fa-github"></i>
-              </div>
-              <div>
-                <div class="contact-method-label">GitHub</div>
-                <div class="contact-method-value">github.com/elbaz26</div>
-              </div>
-            </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/mohamed-elbaz-ai/" target="_blank" rel="noopener noreferrer" class="contact-method-card reveal-on-scroll delay-2" aria-label="Open LinkedIn profile">
+            <div class="contact-icon-box" style="color: #0077b5; background: rgba(0, 119, 181, 0.1);">
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div class="contact-method-content">
+              <div class="contact-method-label">LinkedIn</div>
+              <div class="contact-method-value">linkedin.com/in/mohamed-elbaz-ai</div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+          </a>
 
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/mohamed-elbaz-ai/" target="_blank" rel="noopener noreferrer" class="contact-method-card" aria-label="Open LinkedIn profile">
-              <div class="contact-icon-box" style="color: #0077b5; background: rgba(0, 119, 181, 0.1);">
-                <i class="fa-brands fa-linkedin"></i>
-              </div>
-              <div>
-                <div class="contact-method-label">LinkedIn</div>
-                <div class="contact-method-value">linkedin.com/in/mohamed-elbaz-ai</div>
-              </div>
-            </a>
-          </div>
-
-          <!-- HTML Contact Form -->
-          <div class="contact-form-card reveal-on-scroll delay-1">
-            <form id="contact-form" class="contact-form" novalidate>
-              <div id="form-alert" class="form-alert" role="alert"></div>
-
-              <div class="form-group">
-                <label for="form-name" class="form-label">Full Name <span style="color: var(--accent-primary);">*</span></label>
-                <input type="text" id="form-name" name="name" class="form-control" placeholder="Your Name" required autocomplete="name">
-              </div>
-
-              <div class="form-group">
-                <label for="form-email" class="form-label">Email Address <span style="color: var(--accent-primary);">*</span></label>
-                <input type="email" id="form-email" name="email" class="form-control" placeholder="your.email@example.com" required autocomplete="email">
-              </div>
-
-              <div class="form-group">
-                <label for="form-subject" class="form-label">Subject / Topic</label>
-                <input type="text" id="form-subject" name="subject" class="form-control" placeholder="Internship Inquiry / Project Discussion">
-              </div>
-
-              <div class="form-group">
-                <label for="form-message" class="form-label">Message <span style="color: var(--accent-primary);">*</span></label>
-                <textarea id="form-message" name="message" class="form-control" rows="4" placeholder="Write your message here..." required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary" id="form-submit-btn" style="width: 100%;">
-                <i class="fa-solid fa-paper-plane"></i> Send Message
-              </button>
-            </form>
-          </div>
+          <!-- GitHub -->
+          <a href="https://github.com/elbaz26" target="_blank" rel="noopener noreferrer" class="contact-method-card reveal-on-scroll delay-3" aria-label="Open GitHub profile">
+            <div class="contact-icon-box">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="contact-method-content">
+              <div class="contact-method-label">GitHub</div>
+              <div class="contact-method-value">github.com/elbaz26</div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -1108,6 +1214,24 @@
           </a>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Project Gallery Lightbox Modal -->
+  <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <div class="lightbox-backdrop"></div>
+    <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close image preview">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button type="button" class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button type="button" class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-image" id="lightbox-image">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
   </div>
 

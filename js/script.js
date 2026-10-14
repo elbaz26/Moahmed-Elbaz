@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initBackToTop();
   initCertificateModal();
+  initProjectGallery();
   updateCurrentYear();
 });
 
@@ -290,4 +291,138 @@ function initCertificateModal() {
       closeModal();
     }
   });
+}
+
+/**
+ * 9. Project Screenshots Galleries & Lightbox
+ */
+function initProjectGallery() {
+  const toggleButtons = document.querySelectorAll('.gallery-toggle');
+  const lightbox = document.getElementById('gallery-lightbox');
+
+  // Toggle Gallery collapse/expand for each gallery toggle button
+  toggleButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('aria-controls');
+      const gallery = document.getElementById(targetId);
+      if (!gallery) return;
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !isExpanded);
+      if (isExpanded) {
+        gallery.setAttribute('hidden', '');
+      } else {
+        gallery.removeAttribute('hidden');
+      }
+    });
+  });
+
+  // Lightbox Modal Logic
+  if (!lightbox) return;
+
+  const lightboxImg = document.getElementById('lightbox-image');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const closeBtn = document.getElementById('lightbox-close');
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+  const backdrop = lightbox.querySelector('.lightbox-backdrop');
+
+  let activeItems = [];
+  let currentIndex = 0;
+
+  function showImage(index) {
+    if (activeItems.length === 0) return;
+    currentIndex = (index + activeItems.length) % activeItems.length;
+    const item = activeItems[currentIndex];
+    const img = item.querySelector('img');
+    const caption = item.getAttribute('data-caption') || (img ? img.alt : '');
+
+    if (img && lightboxImg) {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || caption;
+    }
+    if (lightboxCaption) {
+      lightboxCaption.textContent = `${currentIndex + 1} / ${activeItems.length}: ${caption}`;
+    }
+  }
+
+  function openLightbox(items, index) {
+    activeItems = items;
+    showImage(index);
+    lightbox.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+  }
+
+  const galleries = document.querySelectorAll('.project-gallery');
+  galleries.forEach(gallery => {
+    const items = Array.from(gallery.querySelectorAll('.gallery-item'));
+    items.forEach((item, idx) => {
+      item.addEventListener('click', () => openLightbox(items, idx));
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(items, idx);
+        }
+      });
+      if (!item.hasAttribute('tabindex')) {
+        item.setAttribute('tabindex', '0');
+        item.setAttribute('role', 'button');
+        item.setAttribute('aria-label', `View ${item.getAttribute('data-caption') || 'screenshot'}`);
+      }
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  if (backdrop) backdrop.addEventListener('click', closeLightbox);
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showImage(currentIndex - 1);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showImage(currentIndex + 1);
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.hasAttribute('hidden')) return;
+
+    if (e.key === 'Escape') {
+      closeLightbox();
+    } else if (e.key === 'ArrowLeft') {
+      showImage(currentIndex - 1);
+    } else if (e.key === 'ArrowRight') {
+      showImage(currentIndex + 1);
+    }
+  });
+
+  // Touch swipe navigation for mobile devices
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchEndX - touchStartX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        showImage(currentIndex - 1); // Swipe right -> Previous
+      } else {
+        showImage(currentIndex + 1); // Swipe left -> Next
+      }
+    }
+  }, { passive: true });
 }
